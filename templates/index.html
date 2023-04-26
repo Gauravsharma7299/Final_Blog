@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&amp;family=Poppins:wght@500;600&amp;display=swap"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/desktop.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/tablet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/mobile.css') }}">
+   
+</head>
+<body>
+<div class="root">
+    <div class="container">
+             <header>
+                <div class="topbar"><img src="static/images/DuolopLogo.png" alt=""></div>
+            </header> 
+            {% for post in bBlog %}
+            <div class="feature">
+                <div class="main-section">
+                    <a href="{{ url_for('blog') }}" class="main-pic"  >
+                     <div class="main"><img src="{{ post['b_image'] }}" alt=""></div> 
+                    <div class="content flex">
+                        <p class="p1"> Recent</p>
+                        <h1>{{ post['b_title'] }}  </h1>
+                        <p class="p2">{{ post['b_subtitle'] }} </p>
+                        <p class="p3">{{ post['b_date'] }} </p>
+                    </div>
+                   </a>
+                </div>
+                <div class="content2 flex">
+                    <p class="recent_text"> Recent</p>
+                    <p class="date_text">{{ post['b_date'] }} </p>
+                    <h1 >{{ post['b_title'] }}</h1>
+                    <p class="subtitle_text">{{ post['b_subtitle'] }}</p>
+                <div class="readmore flex">
+                    <a href="{{ url_for('blog') }}" class="readmoretext"> <p> Read More</p></a>
+                    <a href="{{ url_for('blog') }}" class="next_page">
+                    <img src="/static/images/RightArrow.png" alt="">
+                    </a>
+                </div>
+                </div>
+            </div>{% endfor %}
+           
+            <div class="card-section">
+                <div class="all_blogs"> All Blogs </div>
+               <div class="card-area flex">
+                {% for post in posts %}
+                    <a href="{{ url_for('blog') }}" class="a_tag">
+                    <div class="many-cards flex">
+            <div class="ima" ><div class="cardimages "><img src="{{ post['image'] }} "alt=""></div></div>
+                        <p class="card_p1">{{ post['title'] }} </p>
+                        <p class="card_p2">{{ post['date'] }}</p>
+                    </div></a>{% endfor %}
+                  
+            </div>
+            
+        </div>   
+        <footer>
+            <p id="copyright-text">© 2022  All Rights Reserved.</p>
+              <div id="page-links">
+                <a href="#"> Privacy </a> <div class="divider"></div>
+                <a href="#"> Terms </a> <div class="divider"></div>
+                <a href="#"> Blog </a>
+            </div>
+
+            <div id="follow-us-container">
+                <p class="neutral40">Follow us on</p>
+
+                <div id="social-media-links">
+                    <a href="#" target="_blank">
+                       
+                        <img src="static/images/LinkdinOriginal.svg" width="20" height="20" alt="linkedin-link">
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="static/images/FacebookOriginal.png" width="20" height="20" alt="facebook-link">
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="static/images/TwitterOriginal.png" width="20" height="20" alt="twitter-link">
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="static/images/InstagramOriginal.png" width="20" height="20" alt="instagram-link">
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="static/images/YouTubeOriginal.png" width="20" height="20" alt="youtube-link">
+                    </a>
+                </div>
+            </div>
+        </footer>
+       
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CreateAccount.css">
+    <link rel="stylesheet" href="createAccount_mobile.css">
+</head>
+<body>
+    <div class="outercontainer">
+        <div class="content-container">
+    
+        <div class="firstcontainer">
+            <header><a href="index.html"><img src="arrow_back_ios_new.png" alt=""></a></header>
+            <h1>Namaste!</h1>
+        </div>
+    <form id="create-account-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Type Your name here"  maxlength="15" oninput="checkInput()">
+      <br>
+      <label for="gender">Gender:</label>
+      <div class="genders">
+        <div class="female"> <img src="Female_uncheck.png" alt="" onclick="changeFemaleImage()" id="myImage"></div>
+        <div class="male"><img  src="Male.png" alt="" onclick="changeMaleImage()" id="myImages"></div></div> 
+      <br>
+      <div id="buttons" ><a href="#" > <img src="Button.png" alt=""></a></div>
+      
+    </form>
+  <div class="lastcontainer"><img src="flower.png" alt=""></div>
+</div>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>

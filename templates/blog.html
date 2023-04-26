@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Detail Blog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blogs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail_blogs1152.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail_blog_tablet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detail_blogs_mobile.css') }}">
+   
+    
+</head>
+<body>
+<div class="root">
+        <div class="main_container">
+        <header>
+            <div class="topbar"><img src="/static/images/DuolopLogo.png" alt=""></div>
+        </header>
+        {% for post in detail_blog %} 
+        <div class="container">
+            <div class="header flex">
+                <div class="left_header flex">
+                    <p class="date"> {{ post['date'] }}</p></div>
+                <div class="right_header flex"> 
+                    <p class="share">Share on</p>
+                   <a href="#" class="facebook"> <img  src="/static/images/facebook.png" alt="" ><img  src="/static/images/Facebook=True.png" ></a> 
+                    <a href="#" class="linkdin"> <img  src="/static/images/linkdin copy.png" alt=""> <img  src="/static/images/LinkedIn=True.png"> </a>
+                   <a href="#" class="twitter"> <img  src="/static/images/twitter copy.png" alt=""> <img  src="/static/images/Twitter=True (1).png"></a>
+                   <a href="#" class="clipboardki"> <img  src="/static/images/ClipBoard.png" alt=""> <img  src="/static/images/CopyClipborard=True.png"> </a>
+                   
+                </div>
+                </div>
+            <div class="title">
+                <p>{{ post['title'] }} </p>
+            </div>
+            <div class="sub_title">
+                <p>{{ post['subtitle'] }} </p>
+            </div>
+            <div class="author_name">
+                <p>{{ post['writer'] }}</p>
+            </div>
+            <div class="header2 ">
+                <div class="right_header2 flex "> 
+                        <p class="share2">Share on</p>
+                        <a href="#" class="facebook2"> <img  src="/static/images/facebook.png" alt=""> <img  src="/static/images/Facebook=True.png" >  </a> 
+                        <a href="#" class="linkdin2"> <img  src="/static/images/linkdin copy.png" alt=""> <img  src="/static/images/LinkedIn=True.png"> </a>
+                       <a href="#" class="twitter2"> <img  src="/static/images/twitter copy.png" alt=""> <img  src="/static/images/Twitter=True (1).png"> </a>
+                       <!-- <a href="#" class="Insta"> <img  src="/images/Insta.png" alt=""> <img  src="/images/Instagram=True.png">  </a> -->
+                      <a href="#" class="clipboard"><img  src="/static/images/ClipBoard.png" alt=""><img  src="/static/images/CopyClipborard=True.png"> </a> 
+                    </div>
+            </div>
+            
+            <div class="Home_image"><img src="{{ post['image'] }}" alt=""></div>
+               <div class="Blog_para1">
+                <p> {{ post['content'] }}<br>
+                   </p>
+            </div>
+            <div class="Home2_image">
+                <img src="{{ post['image2'] }}" alt="">
+            </div>
+            <div class="Home2_image_below">
+                <p>{{ post['content2'] }}</p>
+            </div>
+            <div class="Blog_para2">
+                <p>{{ post['content3'] }} </p>
+            </div>
+              <div class="Home3_image"><img src="{{ post['image3'] }}" alt=""></div>
+              <div class="Blog_para3">
+                <p>{{ post['content4'] }}</p>
+            </div>
+           
+            
+           
+            
+              
+           </div>
+           {% endfor %}
+           <div class="related_blogs"><p>Related Blogs</p></div>
+           <div class="card-area flex">
+            {% for post in detail_Card_blogs  %}     
+               <a href="html/detail_blog.html" class="a_tag">
+               <div class="many-cards flex">
+                   <div class="ima"><div class="cardimagess"><img src="{{ post['image'] }} " alt=""></div></div>
+                   <p class="card_p1">{{ post['title'] }}</p>
+                   <p class="card_p2">{{ post['date'] }}</p>
+               </div>
+              </a>{% endfor %}
+              
+               
+       </div>
+    
+</div>
+<footer>
+    <p id="copyright-text">© 2022 Duolop All Rights Reserved.</p>
+      <div id="page-links">
+        <a href="#"> Privacy </a> <div class="divider"></div>
+        <a href="#"> Terms </a> <div class="divider"></div>
+        <a href="#"> Blog </a>
+    </div>
+
+    <div id="follow-us-container">
+        <p class="neutral40">Follow us on</p>
+
+        <div id="social-media-links">
+            <a href="#" target="_blank">
+               
+                <img src="/static/images/LinkdinOriginal.svg" width="20" height="20" alt="linkedin-link">
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="/static/images/FacebookOriginal.png" width="20" height="20" alt="facebook-link">
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="/static/images/TwitterOriginal.png" width="20" height="20" alt="twitter-link">
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="/static/images/InstagramOriginal.png" width="20" height="20" alt="instagram-link">
+            </a>
+
+            <a href="#" target="_blank">
+                <img src="/static/images/YouTubeOriginal.png" width="20" height="20" alt="youtube-link">
+            </a>
+        </div>
+    </div>
+</footer>
+</div>
+   
+</body>
+<script type="text/javascript">
+    const facebook_btn=document.querySelector('.facebook');
+    const twitter_btn=document.querySelector('.twitter');
+    const linkdin_btn=document.querySelector('.linkdin');
+    const facebook2_btn=document.querySelector('.facebook2');
+    const twitte2_btn=document.querySelector('.twitter2');
+    const linkdi2_btn=document.querySelector('.linkdin2');
+
+    const copytoclipboard_btn=document.querySelector('.clipboardki');
+      const tittle=document.querySelector('.title');
+   function copyContent(){
+    let tittle = document.getElementById('title').innerHTML;
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(tittle);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+}
+function init(){
+        let  postUrl= encodeURI(document.location.href);
+        let postTitle= encodeURI("Beauty of technology");
+        facebook_btn.setAttribute("href",`https://www.facebook.com/sharer.php?u=${postUrl} . ${postTitle} `);
+        linkdin_btn.setAttribute("href",`https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}&title=${postTitle}`);
+        twitter_btn.setAttribute("href",`https://twitter.com/share?url=${postUrl}&text=${postTitle} `);
+        facebook2_btn.setAttribute("href",`https://www.facebook.com/sharer.php?u=${postUrl} . ${postTitle} `);
+        twitte2_btn.setAttribute("href",`https://twitter.com/share?url=${postUrl}&text=${postTitle} `);
+       
+}
+init();
+</script>
+</html>

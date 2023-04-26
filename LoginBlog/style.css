@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    
+  }
+  .firstcontainer{
+    background: url('Group\ 10.png');
+  }
+  header img{
+    height: 30px;
+  }
+ .maincontainer{
+    width: 450px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+ 
+    /* border: 1px solid blueviolet; */
+ }
+  
+  h1 {
+    text-align: center;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 28px;
+color: #222222;
+  }
+  
+  form {
+    margin: 50px auto;
+    max-width: 450px;
+  
+    border-radius: 10px;
+   
+  }
+  #name{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #AAAAAA;
+  }
+  
+  label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+
+
+letter-spacing: 0.5px;
+
+
+
+color: #555555;
+
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  input[type="text"]:hover{
+    border: 3px solid rgb(34, 98, 225);
+  }
+  .genders{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 92px;
+    
+  }
+  .female{
+    border-radius: 10px;
+    width: 72px;
+  }
+  .male{
+    border-radius: 10px;
+    width: 72px;
+  }
+  /* .genders img{
+    border-radius: 10px;
+    width: 72px;
+  } */
+.f img:nth-child(2){
+    display: none;
+}
+.f:hover img:nth-child(1) {
+    display: none;
+}
+.f:hover img:nth-child(2) {
+    display: block;
+}
+
+.m img:nth-child(2){
+    display: none;
+}
+.m:hover img:nth-child(1) {
+    display: none;
+}
+.m:hover img:nth-child(2) {
+    display: block;
+}
+.createbutton img:nth-child(2){
+    display: none;
+}
+.createbutton:hover img:nth-child(1) {
+    display: none;
+}
+.createbutton:hover img:nth-child(2) {
+    display: block;
+}
+  
+  .button{
+   
+    
+    margin-left: 132px;
+    cursor: pointer;
+    margin-top: 120px;
+  }
+  /* .button img{
+    width: 200px;
+  } */
+  .lastcontainer{
+    display: flex;
+    justify-content: right;
+  }
+  .lastcontainer img{
+    justify-content: right;
+   
+  }
+  input[type="submit"]{
+    display: none;
+  }
+  /* input[type="submit"] {
+    padding: 8px;
+    width: 200px;
+    margin-left: 128px;
+    background-color: #ffffff;
+    background-image: linear-gradient(90deg, rgba(209, 70, 170, 1), rgba(59, 123, 211, 1));
+    color: linear-gradient(90deg, rgba(209, 70, 170, 1), rgba(59, 123, 211, 1));
+    border-radius: 20px;
+    cursor: pointer;
+    
+    margin-top: 100px;
+  }
+  input[type="submit"]:hover{
+    border: 5px solid linear-gradient(90deg, rgba(209, 70, 170, 1), rgba(59, 123, 211, 1));
+  }
+   */
+  
